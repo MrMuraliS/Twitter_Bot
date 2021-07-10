@@ -19,15 +19,6 @@ auth.set_access_token(access_token, access_token_secret)
 print('Authenticated')
 
 api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True)
-
-# public_tweets = api.get_user('tarak9999')
-# for user in public_tweets.friends(count=5):
-#     print(user.screen_name)
-
-# print(public_tweets.followers_count)
-# print(public_tweets.friends_count)
-# print(public_tweets.friends)
-
 user = api.me()
 # print(user.friends_count)
 
@@ -55,7 +46,7 @@ def random_qoute():
             author = response['author']
             tag = response['tags'][0]
 
-            api.update_status(f'{content} #{tag}')
+            api.update_status(f'@MuraliS, {content} #{tag}')
             # api.update_status(f'{content}  #{tag} \n\n ~~{author}')
             print(f'Qoute- {i+1} is tweeted')
             time.sleep(60 * 15)
