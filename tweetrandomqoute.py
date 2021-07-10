@@ -4,7 +4,7 @@ from tweepy import OAuthHandler
 from tweepy.error import RateLimitError, TweepError
 import requests
 
-import config
+from os import config
 import time
 
 # Authenticate to Twitter
