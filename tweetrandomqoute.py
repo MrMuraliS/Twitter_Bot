@@ -4,14 +4,15 @@ from tweepy import OAuthHandler
 from tweepy.error import RateLimitError, TweepError
 import requests
 
-from os import config
+import os
+from os import environ
 import time
 
 # Authenticate to Twitter
-access_token = config['Access_Token']
-access_token_secret = config['Access_Token_Secret']
-consumer_key = config['API_Key']
-consumer_secret = config['API_secret_Key']
+access_token = environ['Access_Token']
+access_token_secret = environ['Access_Token_Secret']
+consumer_key = environ['API_Key']
+consumer_secret = environ['API_secret_Key']
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
