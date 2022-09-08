@@ -49,7 +49,7 @@ def random_qoute():
             api.update_status(f'@MuraliS, {content} #{tag}')
             # api.update_status(f'{content}  #{tag} \n\n ~~{author}')
             print(f'Qoute- {i+1} is tweeted')
-            time.sleep(60 * 15)
+            time.sleep(60 * 2)
         except TweepError as e:
             print(e.reason)
         except RateLimitError:
